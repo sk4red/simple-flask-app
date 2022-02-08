@@ -20,3 +20,7 @@ jobs:
         cr_dockerfile_path: ./
         cr_subscription: ${{ secrets.ACR_subscription }} 
         cr_tenant: ${{ secrets.ACR_tenant }} 
+    - uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'simple-flask-app'
+        images: 'sk4redflaskapp.azurecr.io/flask-sk4red:${{ github.run_id }}'    
