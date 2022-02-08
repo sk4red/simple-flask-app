@@ -17,6 +17,6 @@ jobs:
         cr_password: ${{ secrets.ACR_PASS }} 
         cr_servername: ${{ secrets.ACR_SERVER }} 
         cr_dockerfile_name: Dockerfile 
-        cr_dockerfile_path: ci-helper/ 
+        cr_dockerfile_path: .
         cr_subscription: ${{ secrets.ACR_subscription }} 
         cr_tenant: ${{ secrets.ACR_tenant }} 
