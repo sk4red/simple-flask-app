@@ -9,7 +9,7 @@ jobs:
     - name: 'Checkout GitHub Action' 
       uses: actions/checkout@main
     - name: 'Build and Push Docker Image'
-      uses: DigitalInnovation/cloud-devsecops-pipelineactions/workflows/push_image@latest
+      uses: DigitalInnovation/cloud-devsecops-pipelineactions/workflows/CI/push_image@latest
       with:
         cr_imagename: 'flask-sk4red' 
         cr_imagetag: ${{ github.run_id }}
