@@ -16,12 +16,12 @@ jobs:
     
     - uses: azure/docker-login@v1
       with:
-        login-server: mycontainer.azurecr.io
+        login-server: sk4redflaskapp.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - run: |
-        docker build . -t mycontainer.azurecr.io/myapp:${{ github.sha }}
-        docker push mycontainer.azurecr.io/myapp:${{ github.sha }}     
+        docker build . -t sk4redflaskapp.azurecr.io/simple-flask-app:${{ github.sha }}
+        docker push sk4redflaskapp.azurecr.io/simple-flask-app:${{ github.sha }}     
       
     - uses: azure/webapps-deploy@v2
       with:
