@@ -1,4 +1,4 @@
-name: Linux_Container_Node_Workflow
+name: Docker Image Build
 on: workflow_dispatch
 
 jobs:
